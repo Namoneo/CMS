@@ -1,0 +1,16 @@
+{
+  "name": "cms-frontend",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "echo \"Use your preferred Angular build tool to run the application\""
+  },
+  "dependencies": {
+    "@angular/core": "^17.0.0",
+    "@angular/common": "^17.0.0",
+    "@angular/platform-browser": "^17.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
