@@ -1,12 +1,71 @@
-# CMS Project
+# CMS - Content Management System
 
-This repository contains a starter CMS project built with **Angular** on the frontend and **NestJS** on the backend.
+A full-stack Content Management System built with Angular 17 (frontend) and NestJS (backend).
 
-The goal of this project is to provide a foundation for building a full visual CMS/website builder.  Right now it contains only a minimal skeleton; you can extend it to include drag‑and‑drop page building, live preview, authentication, media management, and more.
+## 🚧 Status: Under Development
 
-## Structure
+This project is currently being built. See [Issues](https://github.com/Namoneo/CMS/issues) for progress.
 
-- `frontend/`: Angular application for the CMS user interface.
-- `backend/`: NestJS application serving as the CMS API.
+## 🛠️ Tech Stack
 
-Each of these directories contains its own `README.md` with more details and guidance for further development.
+- **Frontend**: Angular 17
+- **Backend**: NestJS
+- **Database**: PostgreSQL (planned)
+- **Authentication**: JWT (planned)
+
+## 📁 Project Structure
+
+```
+CMS/
+├── backend/           # NestJS API
+│   ├── src/
+│   │   ├── modules/ # Feature modules
+│   │   ├── common/   # Shared utilities
+│   │   └── main.ts
+│   └── package.json
+├── frontend/         # Angular App
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── features/  # Feature modules
+│   │   │   ├── shared/     # Shared components
+│   │   │   └── core/      # Core services
+│   │   └── main.ts
+│   └── package.json
+└── README.md
+```
+
+## 🚀 Quick Start (TBD)
+
+```bash
+# Clone the repository
+git clone https://github.com/Namoneo/CMS.git
+cd CMS
+
+# Install dependencies
+cd backend && npm install
+cd ../frontend && npm install
+
+# Run backend
+cd ../backend && npm run start:dev
+
+# Run frontend (new terminal)
+cd ../frontend && npm start
+```
+
+## 📋 Features (Planned)
+
+- [ ] User Authentication
+- [ ] Content CRUD (Pages, Posts)
+- [ ] Media Library
+- [ ] Categories & Tags
+- [ ] SEO Settings
+- [ ] Theme Customization
+- [ ] Multi-language Support
+
+## 🤝 Contributing
+
+Contributions are welcome! Please open an issue first to discuss what you would like to change.
+
+## 📄 License
+
+MIT
