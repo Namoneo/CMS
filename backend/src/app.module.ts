@@ -5,8 +5,10 @@ import { AuthModule } from './modules/auth/auth.module';
 import { PostsModule } from './modules/posts/posts.module';
 import { PagesModule } from './modules/pages/pages.module';
 import { CategoriesModule } from './modules/categories/categories.module';
+import { AppController } from './app.controller';
 
 @Module({
+  controllers: [AppController],
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,

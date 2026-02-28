@@ -4,7 +4,7 @@ A full-stack Content Management System built with Angular 17 (frontend) and Nest
 
 ## 🚧 Status: Under Development
 
-This project is currently being built. See [Issues](https://github.com/Namoneo/CMS/issues) for progress.
+This project is currently being built. See [Issues](https://github.com/Namoneo/CMS/issues) for progress. A structured list of tickets (admin panel, client site, backend improvements) is in [docs/TICKETS.md](docs/TICKETS.md)—copy from there into GitHub or your tracker.
 
 ## 🛠️ Tech Stack
 
@@ -34,22 +34,28 @@ CMS/
 └── README.md
 ```
 
-## 🚀 Quick Start (TBD)
+## 🚀 Quick Start
 
 ```bash
 # Clone the repository
 git clone https://github.com/Namoneo/CMS.git
 cd CMS
 
+# Start PostgreSQL (Docker)
+docker compose up -d
+
 # Install dependencies
 cd backend && npm install
 cd ../frontend && npm install
 
-# Run backend
-cd ../backend && npm run start:dev
+# Backend: copy .env and run migrations
+cd backend
+cp .env.example .env   # or edit .env if you use different DB credentials
+npx prisma migrate dev
+npm run start:dev
 
-# Run frontend (new terminal)
-cd ../frontend && npm start
+# Frontend (new terminal)
+cd frontend && npm start
 ```
 
 ## 📋 Features (Planned)

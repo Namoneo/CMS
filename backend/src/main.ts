@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import { ValidationPipe } from '@nestjs/common';
+import { ValidationPipe, RequestMethod } from '@nestjs/common';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 
@@ -9,8 +9,13 @@ async function bootstrap() {
   // Enable CORS
   app.enableCors();
   
-  // Global prefix for API
-  app.setGlobalPrefix('api');
+  // Global prefix for API (exclude root and catch-all so / and /en etc. return helpful JSON)
+  app.setGlobalPrefix('api', {
+    exclude: [
+      { path: '', method: RequestMethod.GET },
+      { path: '*', method: RequestMethod.GET },
+    ],
+  });
   
   // Validation
   app.useGlobalPipes(new ValidationPipe({
